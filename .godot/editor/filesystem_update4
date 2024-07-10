@@ -14,3 +14,4 @@ res://Player/Plyer_Area2D.gd
 res://Player/Player_RigidBody2D.gd
 res://mob/mob_2.tscn
 res://mob/mob_2.gd
+res://mob/mob2_Area2D.gd
