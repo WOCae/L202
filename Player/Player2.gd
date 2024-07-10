@@ -43,8 +43,8 @@ func _process(delta):
 
 
 func _on_plyer_area_2d_area_entered(area):
-	print(area.name)
-	if area is Mob: # or area is Boss
+	#print(area.name)
+	if area is Mob2: # or area is Boss
 		print(area.name)
 		#area.hit(1) # 敵に1ダメージ
 		pass
