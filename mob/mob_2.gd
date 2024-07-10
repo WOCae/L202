@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-class_name Mob2
+
 
 @export var speed = 2
 var velocity = Vector2.ZERO
@@ -9,7 +9,7 @@ var deltaX:float = 0
 var deltaY:float = 0
 
 func _ready():
-	$Area2D.name = "mob_area"
+	$mob2_Area2D.name = "mob_area"
 
 func _process(delta):
 	#print($"../Player2".position)
