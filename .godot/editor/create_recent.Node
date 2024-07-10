@@ -1,0 +1,14 @@
+CollisionShape2D
+Area2D
+RigidBody2D
+VisibleOnScreenNotifier2D
+CharacterBody2D
+Timer
+PathFollow2D
+Path2D
+Line2D
+TileMap
+StaticBody2D
+Marker2D
+Camera2D
+Label

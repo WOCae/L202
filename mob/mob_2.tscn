@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://y7ehm3lmeo4j"]
+
+[ext_resource type="Script" path="res://mob/mob_2.gd" id="1_c0b62"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vce6a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bdwnq"]
+
+[node name="mob2" type="RigidBody2D"]
+gravity_scale = 0.0
+script = ExtResource("1_c0b62")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_vce6a")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_bdwnq")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://mgwh4p7o6adf"]
+
+[ext_resource type="Script" path="res://mob/mob.gd" id="1_3njw7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_50uxa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1fjo0"]
+radius = 16.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2sw5u"]
+radius = 16.0
+
+[node name="Mob" type="CharacterBody2D"]
+script = ExtResource("1_3njw7")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_50uxa")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("CircleShape2D_1fjo0")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_2sw5u")
+
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

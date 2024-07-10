@@ -1,0 +1,16 @@
+res://player.tscn
+res://main.gd
+res://main.tscn
+res://bar_2.tscn
+res://ball.tscn
+res://block.tscn
+res://hp_bar.tscn
+res://mob.tscn
+res://mob/mob.tscn
+res://Player/player_2.tscn
+res://Player/Player2.gd
+res://mob/mob.gd
+res://Player/Plyer_Area2D.gd
+res://Player/Player_RigidBody2D.gd
+res://mob/mob_2.tscn
+res://mob/mob_2.gd

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0hhnwb6irw72"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_vr1v1"]
+[ext_resource type="PackedScene" uid="uid://be0rpns2to2oa" path="res://bar_2.tscn" id="2_3cux1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vgkwf"]
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_vr1v1")
+Shotcnt = 0.1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vgkwf")
+
+[node name="bar2" parent="." instance=ExtResource("2_3cux1")]
+visible = false
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(-10, 11, 0, -16, 10, 9, -1, -41)
+closed = true
