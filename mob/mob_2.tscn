@@ -3,16 +3,18 @@
 [ext_resource type="Script" path="res://mob/mob_2.gd" id="1_c0b62"]
 [ext_resource type="Script" path="res://mob/mob2_Area2D.gd" id="2_u65tc"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vce6a"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_n0lc4"]
+radius = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bdwnq"]
+radius = 16.0
 
 [node name="mob2" type="RigidBody2D"]
 gravity_scale = 0.0
 script = ExtResource("1_c0b62")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_vce6a")
+shape = SubResource("CircleShape2D_n0lc4")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
 
