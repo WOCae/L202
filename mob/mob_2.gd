@@ -17,7 +17,7 @@ func _process(delta):
 	deltaX = ($"../Player2".global_position.x - global_position.x)/100
 	deltaY = ($"../Player2".global_position.y - global_position.y)/100
 	velocity = Vector2(deltaX,deltaY)
-	position += velocity.normalized() * speed
+	position += velocity.normalized() * speed *delta*10
 	#move_and_slide()
 	
 	#$"RigidBody2D".position = position
