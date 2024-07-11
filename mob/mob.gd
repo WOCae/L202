@@ -18,7 +18,7 @@ func _process(delta):
 	position += velocity.normalized() * speed
 	#move_and_slide()
 	
-	$"RigidBody2D".position = position
+	#$"RigidBody2D".position = position
 	
 func _on_visible_on_screen_notifier_2d_screen_exited():
 	queue_free()	
